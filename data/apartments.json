@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T11:30:28+07:00",
+  "generated_at": "2026-10-01T11:33:42+07:00",
   "currency": "IDR",
   "criteria": {
     "workplace": "Monas, Jakarta Pusat",
@@ -49,7 +49,7 @@
       "risk": "Medium-High",
       "notes": "Auto-monitored listing. Asking price and legal documents must be verified before transaction.",
       "first_seen_at": "2026-10-01T11:23:49+07:00",
-      "last_seen_at": "2026-10-01T11:30:27+07:00",
+      "last_seen_at": "2026-10-01T11:33:42+07:00",
       "monitor_status": "TARGET_BELOW_900M",
       "fetch_status": "ok"
     },
@@ -76,7 +76,7 @@
       "risk": "Medium",
       "notes": "Auto-monitored listing. Asking price and legal documents must be verified before transaction.",
       "first_seen_at": "2026-10-01T11:23:49+07:00",
-      "last_seen_at": "2026-10-01T11:30:28+07:00",
+      "last_seen_at": "2026-10-01T11:33:42+07:00",
       "monitor_status": "TARGET_BELOW_900M",
       "fetch_status": "ok"
     },
@@ -103,35 +103,8 @@
       "risk": "High",
       "notes": "Auto-monitored listing. Asking price and legal documents must be verified before transaction.",
       "first_seen_at": "2026-10-01T11:23:54+07:00",
-      "last_seen_at": "2026-10-01T11:30:27+07:00",
+      "last_seen_at": "2026-10-01T11:33:41+07:00",
       "monitor_status": "TARGET_BELOW_900M",
-      "fetch_status": "ok"
-    },
-    {
-      "id": "L-8604F6554353",
-      "property": "Thamrin Residence",
-      "area": "Jakarta Pusat",
-      "district": "Thamrin / Kebon Kacang",
-      "bedrooms": 1,
-      "size_sqm": 27,
-      "buy_price": 900000000,
-      "previous_buy_price": null,
-      "rent_monthly": null,
-      "rent_includes_ipl": false,
-      "ipl_monthly": 800000,
-      "market": "New / Primary",
-      "certificate": "Verify SHMSRS; listing labels may vary between Strata / PPJB / AJB",
-      "transit": "MRT Bundaran HI",
-      "transit_type": "MRT",
-      "distance_km": 0.8,
-      "monas_access": "Excellent",
-      "source": "99.co",
-      "source_url": "https://www.99.co/id/properti/apartemen-dijual-900jt-thamrin-cp-1013604684",
-      "risk": "Medium-High",
-      "notes": "Auto-monitored listing. Asking price and legal documents must be verified before transaction.",
-      "first_seen_at": "2026-10-01T11:30:20+07:00",
-      "last_seen_at": "2026-10-01T11:30:20+07:00",
-      "monitor_status": "TARGET_900M",
       "fetch_status": "ok"
     },
     {
@@ -157,7 +130,7 @@
       "risk": "Medium-High",
       "notes": "Auto-monitor fallback used because source fetch failed: HTTP 404. Verify before transaction.",
       "first_seen_at": "2026-10-01T11:23:49+07:00",
-      "last_seen_at": "2026-10-01T11:30:27+07:00",
+      "last_seen_at": "2026-10-01T11:33:41+07:00",
       "monitor_status": "TARGET_900M",
       "fetch_status": "fallback"
     },
