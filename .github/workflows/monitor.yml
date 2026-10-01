@@ -1,0 +1,48 @@
+name: Apartment Listing Monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 8 * * *'
+      timezone: 'Asia/Jakarta'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apartment-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Monitor apartment listings
+        run: npm run monitor
+        env:
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+
+      - name: Validate generated data
+        run: npm run validate
+
+      - name: Commit monitoring data
+        run: |
+          git config user.name "apartment-monitor-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/apartments.json data/changes.json data/health.json
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore(data): refresh apartment monitor"
+            git push
+          fi

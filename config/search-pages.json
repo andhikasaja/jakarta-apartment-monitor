@@ -1,0 +1,47 @@
+[
+  {
+    "name": "99.co - MRT Bundaran HI - Jakarta Pusat",
+    "url": "https://www.99.co/id/jual/apartemen/jakarta-pusat/dekat-mrt-bundaran-hi",
+    "area": "Jakarta Pusat",
+    "transit": "MRT Bundaran HI",
+    "transit_type": "MRT",
+    "distance_hint_km": 1.5,
+    "monas_access": "Excellent"
+  },
+  {
+    "name": "99.co - MRT Dukuh Atas - Jakarta Pusat",
+    "url": "https://www.99.co/id/jual/apartemen/jakarta-pusat/dekat-mrt-dukuh-atas",
+    "area": "Jakarta Pusat",
+    "transit": "MRT Dukuh Atas / Setiabudi corridor",
+    "transit_type": "MRT",
+    "distance_hint_km": 1.5,
+    "monas_access": "Very Good from 2028+"
+  },
+  {
+    "name": "99.co - MRT Setiabudi - Jakarta Selatan",
+    "url": "https://www.99.co/id/jual/apartemen/jakarta-selatan/dekat-mrt-setiabudi",
+    "area": "Jakarta Selatan",
+    "transit": "MRT Setiabudi",
+    "transit_type": "MRT",
+    "distance_hint_km": 1.5,
+    "monas_access": "Very Good from 2028+"
+  },
+  {
+    "name": "99.co - LRT Rasuna Said - Jakarta Selatan",
+    "url": "https://www.99.co/id/jual/apartemen/jakarta-selatan/dekat-stasiun-lrt-rasuna-said",
+    "area": "Jakarta Selatan",
+    "transit": "LRT Rasuna Said",
+    "transit_type": "LRT",
+    "distance_hint_km": 1.5,
+    "monas_access": "Good with transfer"
+  },
+  {
+    "name": "99.co - LRT Cikoko - Jakarta Selatan",
+    "url": "https://www.99.co/id/jual/apartemen/jakarta-selatan/dekat-stasiun-lrt-cikoko",
+    "area": "Jakarta Selatan",
+    "transit": "LRT Cikoko",
+    "transit_type": "LRT",
+    "distance_hint_km": 1.5,
+    "monas_access": "Good with transfer"
+  }
+]

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jakarta Apartment Monitor 2026–2030</title>
+<style>
+:root{
+  --teal:#04c0ad; --teal2:#0E9C8F; --pink:#d90090; --gold:#fec705;
+  --bg:#f4f7f9; --panel:#ffffff; --text:#14212b; --muted:#6b7a89; --line:#e3e9ee;
+  --danger:#bf2f42; --good:#147a5f; --shadow:0 8px 30px rgba(20,33,43,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:linear-gradient(115deg,#062f35 0%,#0a4c50 50%,#0e6e67 100%);color:#fff;padding:30px 28px 24px;box-shadow:var(--shadow)}
+.header-wrap{max-width:1500px;margin:0 auto;display:flex;gap:24px;justify-content:space-between;align-items:flex-end;flex-wrap:wrap}
+h1{margin:0;font-size:clamp(24px,3vw,38px);letter-spacing:-.03em}.subtitle{margin-top:7px;color:#cdebe7;font-size:14px}.status{display:flex;align-items:center;gap:8px;font-size:13px;background:rgba(255,255,255,.09);padding:10px 12px;border:1px solid rgba(255,255,255,.14);border-radius:12px}.dot{width:9px;height:9px;border-radius:99px;background:var(--teal);box-shadow:0 0 0 4px rgba(4,192,173,.18)}
+main{max-width:1500px;margin:0 auto;padding:22px}
+.grid-kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.kpi{padding:18px}.kpi .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.kpi .value{font-size:28px;font-weight:800;margin-top:7px}.kpi .sub{font-size:12px;color:var(--muted);margin-top:5px}
+.controls{padding:16px;margin-bottom:16px}.control-grid{display:grid;grid-template-columns:1.2fr repeat(5,minmax(110px,.7fr));gap:10px}.control-grid input,.control-grid select{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 12px;background:#fff;color:var(--text);outline:none}.control-grid input:focus,.control-grid select:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(4,192,173,.10)}
+.action-row{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer}.btn-primary{background:var(--teal);color:#003c36}.btn-secondary{background:#edf4f5;color:#21464a}.hint{font-size:12px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(320px,.85fr);gap:16px}.section-title{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:18px 18px 0}.section-title h2{font-size:17px;margin:0}.section-title small{color:var(--muted)}
+.table-wrap{overflow:auto;padding:12px 14px 16px}table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px;min-width:1030px}th{position:sticky;top:0;background:#f8fafb;color:#52616d;text-align:left;padding:11px 10px;border-bottom:1px solid var(--line);z-index:1}td{padding:12px 10px;border-bottom:1px solid #edf1f4;vertical-align:top}tr:hover td{background:#fbfefd}.name{font-weight:800}.muted{color:var(--muted);font-size:12px;margin-top:3px}.tag{display:inline-flex;align-items:center;border-radius:99px;padding:4px 8px;font-size:11px;font-weight:700;white-space:nowrap}.tag.target{background:#e8fbf6;color:#0e6a57}.tag.over{background:#fff3e1;color:#946000}.tag.risk-high{background:#ffe9ed;color:#a3263a}.tag.risk-medium{background:#fff6dd;color:#7f6500}.tag.risk-low{background:#eaf8f0;color:#226b4b}.tag.transit{background:#eaf2ff;color:#315e9a}.price{font-weight:800}.link{color:#0b776e;text-decoration:none;font-weight:700}.link:hover{text-decoration:underline}
+.side{display:flex;flex-direction:column;gap:16px}.calc{padding:18px}.calc h3{margin:0 0 12px;font-size:16px}.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field label{display:block;font-size:11px;color:var(--muted);margin-bottom:5px}.field input,.field select{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 10px}.results{margin-top:14px;border-top:1px solid var(--line);padding-top:12px;display:grid;gap:9px}.result{display:flex;justify-content:space-between;gap:12px;font-size:13px}.result strong{text-align:right}.warning{margin-top:12px;padding:10px 12px;border-radius:12px;background:#fff7e9;color:#765900;font-size:12px;line-height:1.5}.goodbox{background:#eefbf6;color:#126049}.dangerbox{background:#fff0f2;color:#8f2537}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px}.listing-card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}.listing-card .top{display:flex;justify-content:space-between;gap:10px}.listing-card h4{margin:0;font-size:14px}.listing-card .big{font-size:22px;font-weight:850;margin:9px 0 3px}.listing-card .meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.listing-card p{font-size:12px;line-height:1.5;color:#54626d;margin:10px 0 0}.footer{font-size:12px;color:var(--muted);padding:18px 4px 28px;line-height:1.6}.endpoint-row{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:10px}.endpoint-row input{border:1px solid var(--line);border-radius:10px;padding:9px 10px;min-width:0}
+.updates{padding:12px 16px 16px;display:grid;gap:9px}.update-item{border:1px solid var(--line);border-radius:12px;padding:10px 11px;background:#fff}.update-item .u-top{display:flex;justify-content:space-between;gap:8px;align-items:center}.update-item .u-name{font-size:13px;font-weight:800}.update-item .u-meta{font-size:11px;color:var(--muted);margin-top:4px}.tag.down{background:#e8fbf6;color:#0e6a57}.tag.new{background:#eaf2ff;color:#315e9a}.tag.up{background:#fff0f2;color:#8f2537}
+@media(max-width:1050px){.grid-kpi{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:1fr}.control-grid{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}}
+@media(max-width:600px){main{padding:12px}.grid-kpi{grid-template-columns:1fr 1fr}.control-grid{grid-template-columns:1fr}.calc-grid{grid-template-columns:1fr}.header-wrap{align-items:flex-start}.kpi .value{font-size:22px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-wrap">
+    <div>
+      <h1>Jakarta Apartment Monitor</h1>
+      <div class="subtitle">Monas work area • Jakarta Pusat & Selatan • MRT/LRT priority • 2026–2030</div>
+    </div>
+    <div class="status"><span class="dot"></span><span id="statusText">Auto-refresh aktif</span></div>
+  </div>
+</header>
+<main>
+  <section class="grid-kpi">
+    <div class="card kpi"><div class="label">Listing Dipantau</div><div class="value" id="kpiCount">-</div><div class="sub">1–2 bedroom</div></div>
+    <div class="card kpi"><div class="label">Di bawah Rp900 Juta</div><div class="value" id="kpiTarget">-</div><div class="sub">Target monitor pembelian</div></div>
+    <div class="card kpi"><div class="label">Sewa Terendah</div><div class="value" id="kpiRent">-</div><div class="sub">per bulan</div></div>
+    <div class="card kpi"><div class="label">Update Data</div><div class="value" id="kpiUpdated" style="font-size:18px">-</div><div class="sub" id="sourceMode">Fallback snapshot</div></div>
+  </section>
+
+  <section class="card controls">
+    <div class="control-grid">
+      <input id="q" placeholder="Cari apartemen / area / transit…" />
+      <select id="area"><option value="">Semua Area</option><option>Jakarta Pusat</option><option>Jakarta Selatan</option></select>
+      <select id="bed"><option value="">1–2 BR</option><option value="1">1 BR</option><option value="2">2 BR</option></select>
+      <select id="transit"><option value="">MRT + LRT</option><option value="MRT">MRT</option><option value="LRT">LRT</option></select>
+      <select id="market"><option value="">Baru + Bekas</option><option value="Secondary">Bekas / Secondary</option><option value="New">Baru</option></select>
+      <select id="priceCap"><option value="900000000">≤ Rp900 jt</option><option value="750000000">≤ Rp750 jt</option><option value="1000000000">≤ Rp1 M</option><option value="1500000000">≤ Rp1,5 M</option><option value="99999999999">Semua Harga</option></select>
+    </div>
+    <div class="action-row">
+      <button class="btn btn-primary" id="refreshBtn">Refresh sekarang</button>
+      <button class="btn btn-secondary" id="resetBtn">Reset filter</button>
+      <span class="hint">Auto-polling setiap 60 detik. Hanya MRT/LRT; KRL tidak digunakan sebagai prioritas.</span>
+    </div>
+    <div class="endpoint-row">
+      <input id="endpoint" placeholder="Opsional: URL JSON live (Google Apps Script / Supabase / API)" />
+      <button class="btn btn-secondary" id="saveEndpoint">Simpan Endpoint</button>
+    </div>
+  </section>
+
+  <div class="layout">
+    <section class="card">
+      <div class="section-title"><h2>Market Watch</h2><small id="resultCount">-</small></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Apartemen</th><th>Tipe</th><th>Harga Beli</th><th>Sewa</th><th>IPL</th><th>Transit</th><th>Surat</th><th>Risk</th><th>Sumber</th></tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <aside class="side">
+      <section class="card calc">
+        <h3>KPR vs Budget Rp5 Juta</h3>
+        <div class="calc-grid">
+          <div class="field"><label>Harga Unit</label><input id="cPrice" type="number" value="850000000" /></div>
+          <div class="field"><label>DP</label><input id="cDP" type="number" value="413000000" /></div>
+          <div class="field"><label>Bunga Efektif / tahun</label><input id="cRate" type="number" step="0.1" value="8.5" /></div>
+          <div class="field"><label>Tenor</label><select id="cTenor"><option value="10">10 tahun</option><option value="15" selected>15 tahun</option></select></div>
+          <div class="field"><label>IPL / bulan</label><input id="cIpl" type="number" value="700000" /></div>
+          <div class="field"><label>Gaji Bersih / bulan</label><input id="cSalary" type="number" value="15000000" /></div>
+          <div class="field"><label>Budget Hunian</label><input id="cBudget" type="number" value="5000000" /></div>
+          <div class="field"><label>Sewa Pembanding</label><input id="cRent" type="number" value="7000000" /></div>
+        </div>
+        <div class="results">
+          <div class="result"><span>Plafon KPR</span><strong id="rLoan">-</strong></div>
+          <div class="result"><span>Cicilan KPR</span><strong id="rMortgage">-</strong></div>
+          <div class="result"><span>KPR + IPL</span><strong id="rAllin">-</strong></div>
+          <div class="result"><span>% gaji bersih</span><strong id="rRatio">-</strong></div>
+          <div class="result"><span>DP minimum agar ≤ budget incl. IPL</span><strong id="rNeedDP">-</strong></div>
+          <div class="result"><span>Selisih vs sewa</span><strong id="rDelta">-</strong></div>
+        </div>
+        <div class="warning" id="calcAdvice">-</div>
+      </section>
+
+      <section class="card">
+        <div class="section-title"><h2>Shortlist Cepat</h2><small>berdasarkan target</small></div>
+        <div class="cards" id="shortlist"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-title"><h2>Update Terbaru</h2><small id="changeUpdated">scheduled monitor</small></div>
+        <div class="updates" id="recentChanges"><div class="muted">Belum ada perubahan harga/listing baru.</div></div>
+      </section>
+    </aside>
+  </div>
+  <div class="footer">
+    Dashboard ini adalah decision-support tool, bukan pengganti legal due diligence. Label portal seperti “SHM”, “HGB”, “Strata”, atau “PPJB” harus diverifikasi terhadap dokumen unit yang sebenarnya, terutama SHMSRS/SHM Sarusun dan status tanah bersama. Asking price bukan harga transaksi final.
+  </div>
+</main>
+<script>
+const FALLBACK = {
+  generated_at: "2026-10-01T11:00:00+07:00",
+  listings: [
+    {id:"SP-1BR-850",property:"Sudirman Park",area:"Jakarta Pusat",district:"Karet Tengsin / Tanah Abang",bedrooms:1,size_sqm:38,buy_price:850000000,rent_monthly:7000000,rent_includes_ipl:true,ipl_monthly:700000,market:"Secondary",certificate:"Listing: SHM / Strata — verify SHMSRS per unit",transit:"MRT/LRT Dukuh Atas corridor",transit_type:"MRT/LRT",distance_km:1.0,monas_access:"Very Good from 2028+",source:"Rumah123",source_url:"https://www.rumah123.com/properti/jakarta-pusat-karet-tengsin/dijual-cepat-appartement-sudirman-park-aps7337049/",risk:"Medium",notes:"Strong resale/rental corridor; verify strata title and outstanding IPL."},
+    {id:"SP-2BR-950",property:"Sudirman Park",area:"Jakarta Pusat",district:"Tanah Abang",bedrooms:2,size_sqm:48,buy_price:950000000,rent_monthly:7500000,rent_includes_ipl:true,ipl_monthly:800000,market:"Secondary",certificate:"Listing: Strata",transit:"MRT/LRT Dukuh Atas corridor",transit_type:"MRT/LRT",distance_km:1.0,monas_access:"Very Good from 2028+",source:"Rumah123",source_url:"https://www.rumah123.com/properti/jakarta-pusat-tanah-abang/dijual-apartemen-sudirman-park-2-bedroom-full-furnished-aps7582165/",risk:"Medium",notes:"Above Rp900m monitor threshold but useful benchmark."},
+    {id:"TR-1BR-900",property:"Thamrin Residence",area:"Jakarta Pusat",district:"Thamrin",bedrooms:1,size_sqm:42,buy_price:900000000,rent_monthly:7000000,rent_includes_ipl:false,ipl_monthly:800000,market:"Secondary",certificate:"Listing: Strata; some units may still be PPJB",transit:"MRT Bundaran HI",transit_type:"MRT",distance_km:0.8,monas_access:"Excellent",source:"Rumah123",source_url:"https://www.rumah123.com/properti/jakarta-pusat-thamrin/dijual-apartemen-thamrin-residence-1-bedroom-furnished-bagus-aps7740554/",risk:"Medium",notes:"Location premium; title status must be verified per unit."},
+    {id:"TW-1BR-750",property:"The Wave",area:"Jakarta Selatan",district:"Rasuna / Kuningan",bedrooms:1,size_sqm:40,buy_price:750000000,rent_monthly:6000000,rent_includes_ipl:true,ipl_monthly:900000,market:"Secondary",certificate:"Listings vary: Strata / PPJB — verify SHMSRS",transit:"LRT Rasuna",transit_type:"LRT",distance_km:0.51,monas_access:"Good with transfer",source:"Pinhome",source_url:"https://www.pinhome.id/dijual/apartemen-sekunder/unit/dijual-apartemen-the-wave-tower-sand-di-apartemen-the-wave",risk:"Medium-High",notes:"Attractive entry price; legal document consistency is the key risk."},
+    {id:"RAS-2BR-1250",property:"Taman Rasuna",area:"Jakarta Selatan",district:"Rasuna / Kuningan",bedrooms:2,size_sqm:74,buy_price:1250000000,rent_monthly:5916667,rent_includes_ipl:true,ipl_monthly:1000000,market:"Secondary",certificate:"Listings include SHM Strata / HGB labels — verify per unit",transit:"LRT Rasuna",transit_type:"LRT",distance_km:0.51,monas_access:"Good with transfer",source:"Pinhome",source_url:"https://www.pinhome.id/disewa/apartemen-sekunder/unit/disewakan-apartemen-jakarta-selatan-setia-budi-menteng-atas-di-taman-rasuna-2-br-ff-include-ipl-11twhrd5",risk:"Medium",notes:"Rental value is stronger than buying for a 2026-2030 horizon."},
+    {id:"LRTT-1BR-857",property:"LRT City Tebet – The Premiere MTH",area:"Jakarta Selatan",district:"Tebet / Cikoko",bedrooms:1,size_sqm:24,buy_price:857000000,rent_monthly:null,rent_includes_ipl:false,ipl_monthly:800000,market:"New / Under Construction",certificate:"Verify project strata / SHMSRS status at handover",transit:"LRT Cikoko",transit_type:"LRT",distance_km:0.12,monas_access:"Good with transfer",source:"Pinhome",source_url:"https://www.pinhome.id/dijual/apartemen-baru/lrt-city-tebet-the-premiere-mth",risk:"High",notes:"Excellent transit proximity, but construction/handover risk must be checked."}
+  ]
+};
+let state = structuredClone(FALLBACK);
+let runtimeCfg={data_url:'./data/apartments.json',changes_url:'./data/changes.json',health_url:'./data/health.json',poll_seconds:60};
+let runtimeLoaded=false;
+let changesState=[];
+const $=id=>document.getElementById(id);
+const rp=n=>n==null?"—":new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(n);
+const compact=n=>n==null?"—":n>=1e9?`Rp ${(n/1e9).toFixed(n%1e9===0?0:2)} M`:n>=1e6?`Rp ${(n/1e6).toFixed(n%1e6===0?0:1)} jt`:rp(n);
+const fmtDate=s=>{try{return new Date(s).toLocaleString('id-ID',{dateStyle:'medium',timeStyle:'short'})}catch{return s||'-'}};
+function riskClass(r){const x=(r||'').toLowerCase();return x.includes('high')?'risk-high':x.includes('low')?'risk-low':'risk-medium'}
+function filters(){return {q:$('q').value.toLowerCase().trim(),area:$('area').value,bed:$('bed').value,transit:$('transit').value,market:$('market').value,cap:Number($('priceCap').value)}}
+function applyFilter(x,f){
+  const hay=[x.property,x.area,x.district,x.transit,x.certificate].join(' ').toLowerCase();
+  return (!f.q||hay.includes(f.q)) && (!f.area||x.area===f.area) && (!f.bed||x.bedrooms===Number(f.bed)) && (!f.transit||x.transit_type.includes(f.transit)) && (!f.market||x.market.includes(f.market)) && (!x.buy_price||x.buy_price<=f.cap);
+}
+function render(){
+  const all=state.listings||[]; const f=filters(); const rows=all.filter(x=>applyFilter(x,f));
+  $('kpiCount').textContent=all.length;
+  $('kpiTarget').textContent=all.filter(x=>x.buy_price&&x.buy_price<900000000&&[1,2].includes(x.bedrooms)).length;
+  const rents=all.map(x=>x.rent_monthly).filter(Boolean); $('kpiRent').textContent=rents.length?compact(Math.min(...rents)):'—';
+  $('kpiUpdated').textContent=fmtDate(state.generated_at).replace(', ',' • '); $('resultCount').textContent=`${rows.length} hasil`;
+  $('tbody').innerHTML=rows.map(x=>`<tr>
+    <td><div class="name">${x.property}</div><div class="muted">${x.area} • ${x.district||''}</div></td>
+    <td><b>${x.bedrooms}BR</b> • ${x.size_sqm} m²<div class="muted">${x.market}</div></td>
+    <td><span class="price">${compact(x.buy_price)}</span><div class="muted">${x.buy_price<900000000?'<span class="tag target">Target &lt;900jt</span>':'<span class="tag over">Benchmark</span>'}</div></td>
+    <td>${compact(x.rent_monthly)}${x.rent_monthly?'<div class="muted">'+(x.rent_includes_ipl?'incl. IPL':'excl. IPL')+'</div>':''}</td>
+    <td>${compact(x.ipl_monthly)}<div class="muted">estimasi / listing</div></td>
+    <td><span class="tag transit">${x.transit_type}</span><div class="muted">${x.transit} • ${x.distance_km??'-'} km</div></td>
+    <td><div style="max-width:230px">${x.certificate}</div></td>
+    <td><span class="tag ${riskClass(x.risk)}">${x.risk}</span></td>
+    <td><a class="link" target="_blank" rel="noopener" href="${x.source_url}">${x.source} ↗</a></td>
+  </tr>`).join('') || `<tr><td colspan="9">Tidak ada listing yang cocok dengan filter.</td></tr>`;
+
+  const short=[...rows].sort((a,b)=>(a.buy_price||9e15)-(b.buy_price||9e15)).slice(0,4);
+  $('shortlist').innerHTML=short.map(x=>`<div class="listing-card"><div class="top"><h4>${x.property}</h4><span class="tag ${riskClass(x.risk)}">${x.risk}</span></div><div class="big">${compact(x.buy_price)}</div><div class="muted">${x.bedrooms}BR • ${x.size_sqm} m² • ${x.area}</div><div class="meta"><span class="tag transit">${x.transit_type} ${x.distance_km??'-'} km</span>${x.buy_price<900000000?'<span class="tag target">Watch</span>':''}</div><p>${x.notes||''}</p></div>`).join('');
+}
+function payment(principal,annualRate,years){if(principal<=0)return 0;const r=annualRate/100/12,n=years*12;if(!r)return principal/n;return principal*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)}
+function principalFromPayment(pmt,annualRate,years){const r=annualRate/100/12,n=years*12;if(!r)return pmt*n;return pmt*(Math.pow(1+r,n)-1)/(r*Math.pow(1+r,n))}
+function calc(){
+  const price=+$('cPrice').value||0,dp=+$('cDP').value||0,rate=+$('cRate').value||0,yrs=+$('cTenor').value||15,ipl=+$('cIpl').value||0,sal=+$('cSalary').value||0,budget=+$('cBudget').value||0,rent=+$('cRent').value||0;
+  const loan=Math.max(0,price-dp),mort=payment(loan,rate,yrs),allin=mort+ipl,ratio=sal?allin/sal*100:0;
+  const maxPmt=Math.max(0,budget-ipl),maxLoan=principalFromPayment(maxPmt,rate,yrs),needDP=Math.max(0,price-maxLoan),delta=rent-allin;
+  $('rLoan').textContent=compact(loan); $('rMortgage').textContent=compact(mort); $('rAllin').textContent=compact(allin); $('rRatio').textContent=ratio.toFixed(1)+'%'; $('rNeedDP').textContent=compact(needDP); $('rDelta').textContent=(delta>=0?'+ ':'- ')+compact(Math.abs(delta))+' / bln';
+  const box=$('calcAdvice'); box.className='warning '+(ratio<=33&&allin<=budget?'goodbox':'dangerbox');
+  if(allin<=budget&&ratio<=33) box.textContent='Struktur ini relatif disiplin: housing cost berada dalam budget dan sekitar ≤33% gaji bersih. Tetap sisakan emergency fund setelah DP dan biaya transaksi.';
+  else if(allin<=budget) box.textContent='Masih dalam target Rp5 juta, tetapi rasio terhadap gaji bersih perlu diperhatikan. Pastikan tidak menghabiskan liquidity untuk DP.';
+  else box.textContent='Melewati target housing cost. Naikkan DP, pilih unit lebih murah, atau gunakan skenario sewa. Jangan menilai cicilan tanpa memasukkan IPL.';
+}
+async function fetchJSON(url){
+  const sep=url.includes('?')?'&':'?';
+  const res=await fetch(url+sep+'_='+Date.now(),{cache:'no-store'});
+  if(!res.ok)throw new Error('HTTP '+res.status);
+  return await res.json();
+}
+async function loadRuntimeConfig(){
+  if(runtimeLoaded)return runtimeCfg;
+  try{
+    const cfg=await fetchJSON('./runtime-config.json');
+    runtimeCfg={...runtimeCfg,...cfg};
+  }catch(e){}
+  runtimeLoaded=true;
+  return runtimeCfg;
+}
+function renderChanges(){
+  const el=$('recentChanges');
+  const rows=(changesState||[]).slice(0,6);
+  if(!rows.length){el.innerHTML='<div class="muted">Belum ada listing baru atau perubahan harga yang tercatat.</div>';return;}
+  el.innerHTML=rows.map(x=>{
+    const klass=x.type==='PRICE_DOWN'?'down':x.type==='PRICE_UP'?'up':'new';
+    const label=x.type==='PRICE_DOWN'?'Harga turun':x.type==='PRICE_UP'?'Harga naik':'Listing baru';
+    const delta=x.delta?` • ${x.delta<0?'-':'+'}${compact(Math.abs(x.delta))}`:'';
+    return `<div class="update-item"><div class="u-top"><div class="u-name">${x.property||'Listing'}</div><span class="tag ${klass}">${label}</span></div><div class="u-meta">${x.bedrooms||'-'}BR • ${compact(x.price)}${delta} • ${fmtDate(x.at)}</div></div>`;
+  }).join('');
+}
+async function loadChanges(){
+  await loadRuntimeConfig();
+  try{
+    const j=await fetchJSON(runtimeCfg.changes_url||'./data/changes.json');
+    changesState=Array.isArray(j.changes)?j.changes:[];
+    $('changeUpdated').textContent=fmtDate(j.generated_at||'');
+  }catch(e){changesState=[];$('changeUpdated').textContent='local fallback';}
+  renderChanges();
+}
+async function loadData(manual=false){
+  await loadRuntimeConfig();
+  const saved=localStorage.getItem('aptEndpoint')||'';
+  const candidates=[];
+  if(saved)candidates.push(saved);
+  if(runtimeCfg.data_url)candidates.push(runtimeCfg.data_url);
+  candidates.push('./data/apartments.json');
+  let loaded=false,err='';
+  for(const url of [...new Set(candidates)]){
+    try{
+      const j=await fetchJSON(url);
+      if(!Array.isArray(j.listings))throw new Error('Format JSON tidak sesuai');
+      state=j;loaded=true;
+      $('sourceMode').textContent=saved&&url===saved?'Custom live endpoint':url.includes('raw.githubusercontent.com')?'GitHub live JSON':'Local JSON';
+      break;
+    }catch(e){err=e.message}
+  }
+  if(!loaded){state=structuredClone(FALLBACK);$('sourceMode').textContent='Embedded fallback';}
+  $('statusText').textContent=loaded?'Auto-refresh aktif':'Auto-refresh aktif • fallback'; render();
+  if(manual&&!loaded) alert('Endpoint belum dapat dibaca. Dashboard tetap memakai snapshot embedded. Detail: '+err);
+}
+['q','area','bed','transit','market','priceCap'].forEach(id=>$(id).addEventListener(id==='q'?'input':'change',render));
+['cPrice','cDP','cRate','cTenor','cIpl','cSalary','cBudget','cRent'].forEach(id=>$(id).addEventListener('input',calc));
+$('refreshBtn').addEventListener('click',async()=>{await Promise.all([loadData(true),loadChanges()])});
+$('resetBtn').addEventListener('click',()=>{$('q').value='';$('area').value='';$('bed').value='';$('transit').value='';$('market').value='';$('priceCap').value='900000000';render()});
+$('saveEndpoint').addEventListener('click',()=>{const v=$('endpoint').value.trim();if(v)localStorage.setItem('aptEndpoint',v);else localStorage.removeItem('aptEndpoint');loadData(true)});
+$('endpoint').value=localStorage.getItem('aptEndpoint')||'';
+(async()=>{
+  await loadRuntimeConfig();
+  await Promise.all([loadData(),loadChanges()]);
+  calc();
+  const poll=Math.max(30,Number(runtimeCfg.poll_seconds)||60)*1000;
+  setInterval(()=>{loadData(false);loadChanges();},poll);
+})();
+</script>
+</body>
+</html>

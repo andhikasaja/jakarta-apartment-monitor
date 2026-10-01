@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://www.rumah123.com/properti/jakarta-pusat-karet-tengsin/dijual-cepat-appartement-sudirman-park-aps7337049/",
+    "property": "Sudirman Park",
+    "bedrooms": 1,
+    "size_sqm": 38,
+    "buy_price": 850000000,
+    "market": "Secondary",
+    "source": "Rumah123"
+  },
+  {
+    "url": "https://www.rumah123.com/properti/jakarta-pusat-thamrin/dijual-apartemen-thamrin-residence-1-bedroom-furnished-bagus-aps7740554/",
+    "property": "Thamrin Residence",
+    "bedrooms": 1,
+    "size_sqm": 42,
+    "buy_price": 900000000,
+    "market": "Secondary",
+    "source": "Rumah123"
+  },
+  {
+    "url": "https://www.pinhome.id/dijual/apartemen-sekunder/unit/dijual-apartemen-the-wave-tower-sand-di-apartemen-the-wave",
+    "property": "The Wave",
+    "bedrooms": 1,
+    "size_sqm": 40,
+    "buy_price": 750000000,
+    "market": "Secondary",
+    "source": "Pinhome"
+  },
+  {
+    "url": "https://www.pinhome.id/dijual/apartemen-baru/lrt-city-tebet-the-premiere-mth",
+    "property": "LRT City Tebet - The Premiere MTH",
+    "bedrooms": 1,
+    "size_sqm": 24,
+    "buy_price": 857000000,
+    "market": "New / Under Construction",
+    "source": "Pinhome"
+  }
+]

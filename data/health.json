@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-10-01T11:30:28+07:00",
+  "status": "ok",
+  "sources_ok": 2,
+  "sources_failed": 3,
+  "discovered_urls": 28,
+  "inspected": 28,
+  "accepted": 5,
+  "accepted_listings": 7,
+  "serper_enabled": false,
+  "message": "Completed with one or more source fetch failures; retained safe fallbacks where possible."
+}

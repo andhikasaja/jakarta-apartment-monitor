@@ -1,0 +1,7 @@
+{
+  "data_url": "https://raw.githubusercontent.com/andhikasaja/jakarta-apartment-monitor/main/data/apartments.json",
+  "changes_url": "https://raw.githubusercontent.com/andhikasaja/jakarta-apartment-monitor/main/data/changes.json",
+  "health_url": "https://raw.githubusercontent.com/andhikasaja/jakarta-apartment-monitor/main/data/health.json",
+  "poll_seconds": 60,
+  "repository": "andhikasaja/jakarta-apartment-monitor"
+}

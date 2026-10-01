@@ -1,0 +1,32 @@
+{
+  "workplace": "Monas, Jakarta Pusat",
+  "areas": [
+    "Jakarta Pusat",
+    "Jakarta Selatan"
+  ],
+  "bedrooms": [
+    1,
+    2
+  ],
+  "transit_priority": [
+    "MRT",
+    "LRT"
+  ],
+  "exclude_transit_priority": [
+    "KRL"
+  ],
+  "target_price_idr": 900000000,
+  "discovery_price_ceiling_idr": 1000000000,
+  "salary_net_monthly_idr": 15000000,
+  "housing_budget_monthly_idr": 5000000,
+  "kpr_interest_effective_percent": 8.5,
+  "kpr_tenors_years": [
+    10,
+    15
+  ],
+  "search_max_links_per_page": 12,
+  "request_timeout_ms": 18000,
+  "user_agent": "Mozilla/5.0 (compatible; JakartaApartmentMonitor/1.0; +https://github.com/)",
+  "monitor_concurrency": 4,
+  "max_listings": 80
+}
