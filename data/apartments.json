@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T14:08:11+07:00",
+  "generated_at": "2026-10-09T14:13:31+07:00",
   "currency": "IDR",
   "criteria": {
     "workplace": "Monas, Jakarta Pusat",
@@ -49,7 +49,7 @@
       "risk": "Medium-High",
       "notes": "Auto-monitored listing. Asking price and legal documents must be verified before transaction.",
       "first_seen_at": "2026-10-01T11:23:49+07:00",
-      "last_seen_at": "2026-10-08T14:08:11+07:00",
+      "last_seen_at": "2026-10-09T14:13:31+07:00",
       "monitor_status": "TARGET_BELOW_900M",
       "fetch_status": "ok"
     },
@@ -76,7 +76,7 @@
       "risk": "Medium",
       "notes": "Auto-monitored listing. Asking price and legal documents must be verified before transaction.",
       "first_seen_at": "2026-10-01T11:23:49+07:00",
-      "last_seen_at": "2026-10-08T14:08:11+07:00",
+      "last_seen_at": "2026-10-09T14:13:29+07:00",
       "monitor_status": "TARGET_BELOW_900M",
       "fetch_status": "ok"
     },
@@ -103,7 +103,7 @@
       "risk": "High",
       "notes": "Auto-monitored listing. Asking price and legal documents must be verified before transaction.",
       "first_seen_at": "2026-10-01T11:23:54+07:00",
-      "last_seen_at": "2026-10-08T14:08:11+07:00",
+      "last_seen_at": "2026-10-09T14:13:31+07:00",
       "monitor_status": "TARGET_BELOW_900M",
       "fetch_status": "ok"
     },
@@ -130,7 +130,7 @@
       "risk": "Medium-High",
       "notes": "Auto-monitor fallback used because source fetch failed: HTTP 404. Verify before transaction.",
       "first_seen_at": "2026-10-01T11:23:49+07:00",
-      "last_seen_at": "2026-10-08T14:08:10+07:00",
+      "last_seen_at": "2026-10-09T14:13:30+07:00",
       "monitor_status": "TARGET_900M",
       "fetch_status": "fallback"
     },
