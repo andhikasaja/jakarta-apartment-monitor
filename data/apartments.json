@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T14:21:23+07:00",
+  "generated_at": "2026-11-05T14:47:52+07:00",
   "currency": "IDR",
   "criteria": {
     "workplace": "Monas, Jakarta Pusat",
@@ -49,7 +49,7 @@
       "risk": "Medium-High",
       "notes": "Auto-monitored listing. Asking price and legal documents must be verified before transaction.",
       "first_seen_at": "2026-10-01T11:23:49+07:00",
-      "last_seen_at": "2026-11-04T14:21:23+07:00",
+      "last_seen_at": "2026-11-05T14:47:52+07:00",
       "monitor_status": "TARGET_BELOW_900M",
       "fetch_status": "ok"
     },
@@ -74,11 +74,11 @@
       "source": "Rumah123",
       "source_url": "https://www.rumah123.com/properti/jakarta-pusat-karet-tengsin/dijual-cepat-appartement-sudirman-park-aps7337049",
       "risk": "Medium",
-      "notes": "Auto-monitored listing. Asking price and legal documents must be verified before transaction.",
+      "notes": "Auto-monitor fallback used because source fetch failed: HTTP 403. Verify before transaction.",
       "first_seen_at": "2026-10-01T11:23:49+07:00",
-      "last_seen_at": "2026-11-04T14:21:21+07:00",
+      "last_seen_at": "2026-11-05T14:47:50+07:00",
       "monitor_status": "TARGET_BELOW_900M",
-      "fetch_status": "ok"
+      "fetch_status": "fallback"
     },
     {
       "id": "LRTT-1BR-857",
@@ -103,7 +103,7 @@
       "risk": "High",
       "notes": "Auto-monitored listing. Asking price and legal documents must be verified before transaction.",
       "first_seen_at": "2026-10-01T11:23:54+07:00",
-      "last_seen_at": "2026-11-04T14:21:23+07:00",
+      "last_seen_at": "2026-11-05T14:47:52+07:00",
       "monitor_status": "TARGET_BELOW_900M",
       "fetch_status": "ok"
     },
@@ -128,9 +128,9 @@
       "source": "Rumah123",
       "source_url": "https://www.rumah123.com/properti/jakarta-pusat-thamrin/dijual-apartemen-thamrin-residence-1-bedroom-furnished-bagus-aps7740554",
       "risk": "Medium-High",
-      "notes": "Auto-monitor fallback used because source fetch failed: HTTP 404. Verify before transaction.",
+      "notes": "Auto-monitor fallback used because source fetch failed: HTTP 403. Verify before transaction.",
       "first_seen_at": "2026-10-01T11:23:49+07:00",
-      "last_seen_at": "2026-11-04T14:21:22+07:00",
+      "last_seen_at": "2026-11-05T14:47:50+07:00",
       "monitor_status": "TARGET_900M",
       "fetch_status": "fallback"
     },
